@@ -1,36 +1,36 @@
 // -------------------- HIER WERTE EINSTELLEN --------------------
 
 #include <SoftwareSerial.h>
-SoftwareSerial relaiskarte(8, 9);   // RX, TX
+SoftwareSerial relaiskarte(8, 9);                                             // RX, TX
 
-int i;                              // Variable für Countdown
+int i;                                                                        // Variable für Countdown
 
-int vortest = 30;                   // Zeit des Vortests in Sekunden
-int looptime = 60;                  // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
-int loopueberlauf = 30;             // Nächste Überprüfung des Überlaufsensors in Minuten
-int looptank = 1;                   // Nächste Überprüfung des Tanksensors in Minuten
+int vortest = 30;                                                             // Zeit des Vortests in Sekunden
+int looptime = 60;                                                            // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
+int loopueberlauf = 30;                                                       // Nächste Überprüfung des Überlaufsensors in Minuten
+int looptank = 1;                                                             // Nächste Überprüfung des Tanksensors in Minuten
 
 // bei diesen Sensorwerten wird jede Pflanze gegossen
-int wert1 = 300;                    // Blumenkasten R
-int wert2 = 280;                    // Blumenkasten L
-int wert3 = 300;                    // Glas Physalis
-int wert4 = 250;                    // Jostabeeren
-int wert5 = 310;                    // Topf Chili
+int wert1 = 300;                                                              // Blumenkasten R
+int wert2 = 280;                                                              // Blumenkasten L
+int wert3 = 300;                                                              // Glas Physalis
+int wert4 = 250;                                                              // Jostabeeren
+int wert5 = 310;                                                              // Topf Chili
 
-int pump = 10000;                   // Zeit wie lange die Pumpe läuft in Milisekunden
+int pump = 10000;                                                             // Zeit wie lange die Pumpe läuft in Milisekunden
 
 //*************************************************************************************************************************************
 
 void setup() {
   // RELAISKARTE
-  delay(100);                          // Sicherheitspause
-  relaiskarte.begin(9600);             // Baudrate der Relaiskarte auf 9600 Baud setzen
-  relaiskarte.write((byte)0x50);       // Begin
+  delay(100);                                                                 // Sicherheitspause
+  relaiskarte.begin(9600);                                                    // Baudrate der Relaiskarte auf 9600 Baud setzen
+  relaiskarte.write((byte)0x50);                                              // Begin
   delay(1);
-  relaiskarte.write((byte)0x51);       // Ende
+  relaiskarte.write((byte)0x51);                                              // Ende
   delay(1);
-  relaiskarte.write((byte)B11111111);  // Alle Relais aus
-  delay(1000);                         // Sicherheitspause damit sich die Spannung stabilisiert
+  relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
+  delay(1000);                                                                // Sicherheitspause damit sich die Spannung stabilisiert
 
 
   // BAUD RATE UND PINBELEGUNG
@@ -46,20 +46,27 @@ void setup() {
 
 
   // VORTEST SENSOREN
-  Serial.print("\nMesswerte der Sensoren:\n");                              // Textausgabe
-  Serial.println(analogRead(A1));                                           // Sensorwert Ausgabe
-  Serial.println(analogRead(A2));                                           // Sensorwert Ausgabe
-  Serial.println(analogRead(A3));                                           // Sensorwert Ausgabe
-  Serial.println(analogRead(A4));                                           // Sensorwert Ausgabe
-  Serial.println(analogRead(A5));                                           // Sensorwert Ausgabe
-  delay(1000);
+  Serial.print("\nMesswerte der Sensoren:\n");                                // Textausgabe
+  Serial.println(analogRead(A1));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A2));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A3));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A4));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A5));                                             // Sensorwert Ausgabe
+  delay(1000);                                                                // Lesepause
   Serial.print("\n\n\nBitte warten\nSensoren ermitteln den genauen Feuchtigkeitswert\n"); // Textausgabe
-  i = (vortest);                                                             // Countdownzeit oben einstellen
+  i = (vortest);                                                              // Countdownzeit oben einstellen
   for (i; i > 0; i--) {
     Serial.println(i);
-    delay(1000);                                                             // Lesepause
+    delay(1000);
   }
-  Serial.print("\nBereit\n\n");                                              // Textausgabe
+  Serial.print("\nMesswerte der Sensoren:\n");                                // Textausgabe
+  Serial.println(analogRead(A1));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A2));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A3));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A4));                                             // Sensorwert Ausgabe
+  Serial.println(analogRead(A5));                                             // Sensorwert Ausgabe
+  delay(1000);                                                                // Textausgabe
+  Serial.print("\nBereit\n\n");                                               // Textausgabe
 
 
   // RELAISKARTE
@@ -75,17 +82,17 @@ void setup() {
 //***************************************************************************************************************************************
 void loop() {
 
-  delay(1000);                                                                                  // Lesepause
-  Serial.print("Loopbeginn\n");                                                                 // Textausgabe
+  delay(1000);                                                                // Lesepause
+  Serial.print("Loopbeginn\n");                                               // Textausgabe
 
   // ÜBERLAUFSENSOR
-  delay(1000);                                                                                  // Sicherheitspause
-  Serial.print("\nÜberlaufsensor wird abgefragt \n");                                           // Textausgabe
-  delay(1000);                                                                                  // Lesepause
-  while (!digitalRead(6)) {                                                                     // solange Überlaufsensor false (also nass)
+  delay(1000);                                                                // Sicherheitspause
+  Serial.print("\nÜberlaufsensor wird abgefragt \n");                         // Textausgabe
+  delay(1000);                                                                // Lesepause
+  while (!digitalRead(6)) {                                                   // solange Überlaufsensor false (also nass)
     Serial.print("\nALARM! Blumentöpfe laufen über! \nPause bis das Wasser verdunstet ist (Angaben in Minuten)\n");  // Textausgabe
-    digitalWrite(5, HIGH);                                                                      // LED an
-    i = (loopueberlauf);                                                                        // Countdownzeit oben einstellen
+    digitalWrite(5, HIGH);                                                    // LED an
+    i = (loopueberlauf);                                                      // Countdownzeit oben einstellen
     while (i != 0) {
       for (i; i > 0; i--) {
         Serial.println(i);
@@ -93,15 +100,15 @@ void loop() {
       }
     }
   }
-  digitalWrite(5, LOW);  // LED aus
-  Serial.print("\nÜberlaufsensor OK\n");
+  digitalWrite(5, LOW);                                                       // LED aus
+  Serial.print("\nÜberlaufsensor OK\n");                                      // Textausgabe
 
   // TANKÜBERPRÜFUNG
   int Tanksensor = digitalRead(7);                                            // Signal am Pin auslesen und in Variable Tanksensor speichern
   delay(1000);                                                                // Sicherheitspause
   Serial.print("\nWasserstand im Tank wird abgefragt\n");                     // Textausgabe
   delay(1000);                                                                // Lesepause
-  while (digitalRead(7)) {                                                    // solange Tanksensor false (also trocken)
+  while (digitalRead(7)) {                                                    // solange Tanksensor true (also trocken)
     Serial.print("\nWassertank ist Leer! Bitte auffüllen!\nPause bis zur nächsten Wasserstandsabfrage (Angaben in Minuten)\n"); // Textausgabe
     digitalWrite(5, HIGH);                                                    // LED an
     i = (looptank);                                                           // Countdownzeit oben einstellen
@@ -131,8 +138,8 @@ void loop() {
   } else {
     relaiskarte.write((byte)B01111110);                                       // K1,8 (Relais für Magnetventil und Pumpe)
     Serial.print("Pflanze 1 wird gegossen\n");                                // Textausgabe
-    delay(pump);                                                              // Zeit die die Pumpe läuft
-    relaiskarte.write((byte)B11111111);                                       // relais aus
+    delay(pump);                                                              // Pumpzeit oben einstellen
+    relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
   // SENSOR 2 (Blumenkasten L)
@@ -151,7 +158,7 @@ void loop() {
   } else {
     relaiskarte.write((byte)B10111110);                                       // K2,8 (Relais für Magnetventil und Pumpe)
     Serial.print("Pflanze 2 wird gegossen\n");                                // Textausgabe
-    delay(pump);                                                              // Zeit die die Pumpe läuft
+    delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
@@ -171,7 +178,7 @@ void loop() {
   } else {
     relaiskarte.write((byte)B11011110);                                       // K3,8 (Relais für Magnetventil und Pumpe)
     Serial.print("Pflanze 3 wird gegossen\n");                                // Textausgabe
-    delay(10000);                                                             // Zeit die die Pumpe läuft
+    delay(10000);                                                             // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
@@ -191,7 +198,7 @@ void loop() {
   } else {
     relaiskarte.write((byte)B11101110);                                       // K4,8 (Relais für Magnetventil und Pumpe)
     Serial.print("Pflanze 4 wird gegossen\n");                                // Textausgabe
-    delay(pump);                                                              // Zeit die die Pumpe läuft
+    delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
@@ -211,7 +218,7 @@ void loop() {
   } else {
     relaiskarte.write((byte)B11110110);                                       // K5,8 (Relais für Magnetventil und Pumpe)
     Serial.print("Pflanze 5 wird gegossen\n");                                // Textausgabe
-    delay(pump);                                                              // Zeit die die Pumpe läuft
+    delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
@@ -235,18 +242,3 @@ void loop() {
   }
 }
 
-/*
-
-  
-  21.08.2022
-  Tanksensor INPUT_PULLUP hinzugefügt
-  20.08.2022
-  Korrekturen, countdown variablen geändert
-  15.08.2022
-  variablen zum einfachen eingeben der werte/zeiten hinzugefügt
-  02.08.2022
-  relais r1 und r2 öffnen wieder unabhängig voneinander
-  timer loop auf 60 min gesetzt
-  pumpzeit auf 10 sek gesetzt
-  relaisklicken vor jedem sensorprüfen auf 4 ms gesetzt
-*/
