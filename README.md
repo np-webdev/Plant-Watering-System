@@ -72,7 +72,7 @@ DIY Arduino Project
   -Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
   -StepDown oder StepUp Regler kaufen je nach dem ob man ein 5V oder ein 12V Netzteil hat.
   Man kann auch eine Powerbank und ein Solarmodul statt einem Netzteil nutzen. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann
-  -Man kann insgesamt acht Pflanzen bewässern da der Arduino Uno/Nano acht analoge Eingänge für die Feuchtigkeitssensoren hat (Nicht getestet)
+  -Der Arduino Uno hat sechs analoge Eingänge für die Feuchtigkeitssensoren. somit könnte man sechs Pflanzen bewässern.
   -Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden.
   Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll.
   Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
