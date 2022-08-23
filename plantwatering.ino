@@ -12,9 +12,9 @@ int looptank = 1;                                                             //
 
 // bei diesen Sensorwerten wird jede Pflanze gegossen
 int wert1 = 300;                                                              // Blumenkasten R
-int wert2 = 280;                                                              // Blumenkasten L
+int wert2 = 280;                                                              // Blumenkasten L (neuer sensor)
 int wert3 = 300;                                                              // Glas Physalis
-int wert4 = 250;                                                              // Jostabeeren
+int wert4 = 250;                                                              // Jostabeeren (neuer sensor)
 int wert5 = 310;                                                              // Topf Chili
 
 int pump = 10000;                                                             // Zeit wie lange die Pumpe läuft in Milisekunden
@@ -224,10 +224,10 @@ void loop() {
 
   // ENDE
   delay(1000); // Lesepause
-  Serial.print("\nNächste Überprüfung sobald der Countdown abläuft (Angaben in Minuten)\n");  // Textausgabe
   i = (looptime);                                                             // Countdownzeit oben einstellen
   while (i != 0) {
     for (i; i > 0; i--) {
+      Serial.print("\nNächste Überprüfung sobald der Countdown abläuft (Angaben in Minuten)\n");  // Textausgabe
       Serial.println(i);
       delay(1000);                                                            // Lesepause
       Serial.print("\nMesswerte der Sensoren:\n");                            // Textausgabe
@@ -241,4 +241,3 @@ void loop() {
     }
   }
 }
-
