@@ -26,7 +26,7 @@ https://www.ebay.de/itm/144138039161
   Alternative Relaiskarte (benötigt 8x output vom Arduino und Strom)
   https://www.ebay.de/itm/252355367721
 
-  Wasserpumpe bürstenlos 12V, 350mA, 4,2W, 240L/h, Hubhöhe 3m, Anschlüsse da = 8mm
+  Wasserpumpe bürstenlos 12V, 350mA, 4,2W, 240L/h, Hubhöhe 3m, Anschlüsse da = 8mm, Maße lxbxh=55x37x43mm
   https://www.ebay.de/itm/353246497633
 
   Magnetventile 12V, <160mA, <3W, 0,6Bar, N/C (normaly closed), Anschlüsse da = 4mm
