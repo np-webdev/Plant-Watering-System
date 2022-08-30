@@ -6,25 +6,26 @@ von Niko
 [Arduino UNO](https://www.ebay.de/itm/144138039161)
 
 Pin A1 bis A5 Feuchtigkeitssensoren für die Erde
+
 [Analog Capacitive Soil Moisture Sensor](https://www.ebay.de/itm/164657628668)
 
-  Pin 6 Überlaufsensor
-  [YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)]
-  (https://www.ebay.de/itm/203252815145)
 
-  Pin 7 Tanküberprüfung
-  Schwimmerschalter Pegelschalter Füllstandsschalter SensorSchwimmerNiveauschalter
-  https://www.ebay.de/itm/384891203932
+Pin 6 Überlaufsensor
 
-  Relaiskarte (würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)
-  ICStation ICSE014A 8 Channel, Micro USB, DC 5V, 700mA
-  http://www.icstation.com/icstation-channel-icse014a-micro-switch-relay-module-upper-computer-control-board-icse014a-p-5185.html
+[YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)](https://www.ebay.de/itm/203252815145)
 
-  Alternative Relaiskarte (benötigt 8x output vom Arduino und Strom)
-  https://www.ebay.de/itm/252355367721
+Pin 7 Tanküberprüfung
 
-  Wasserpumpe bürstenlos 12V, 350mA, 4,2W, 240L/h, Hubhöhe 3m, Anschlüsse da = 8mm, Maße lxbxh=55x37x43mm
-  https://www.ebay.de/itm/353246497633
+[Schwimmerschalter Pegelschalter Füllstandsschalter SensorSchwimmerNiveauschalter]
+(https://www.ebay.de/itm/384891203932)
+
+Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)
+
+[ICStation ICSE014A 8 Channel, Micro USB, DC 5V, 700mA](http://www.icstation.com/icstation-channel-icse014a-micro-switch-relay-module-upper-computer-control-board-icse014a-p-5185.html)
+
+[Alternative Relaiskarte (benötigt 8x output vom Arduino und Strom)](https://www.ebay.de/itm/252355367721)
+
+[Wasserpumpe bürstenlos 12V, 350mA, 4,2W, 240L/h, Hubhöhe 3m, Anschlüsse da = 8mm, Maße lxbxh=55x37x43mm](https://www.ebay.de/itm/353246497633)
 
   Magnetventile 12V, <160mA, <3W, 0,6Bar, N/C (normaly closed), Anschlüsse da = 4mm
   https://www.ebay.de/itm/352962597146
