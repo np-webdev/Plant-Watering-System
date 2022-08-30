@@ -77,4 +77,3 @@ Preise Stand 08.2022<br/>
 1   5x Dioden + LED<br/>
 <br/>
 160€ Summe
-
