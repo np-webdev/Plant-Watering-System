@@ -5,57 +5,50 @@ von Niko
 
 [Arduino UNO](https://www.ebay.de/itm/144138039161)
 
-Pin A1 bis A5 Feuchtigkeitssensoren für die Erde<br/><br/>
-
+Pin A1 bis A5 Feuchtigkeitssensoren für die Erde<br/>
 [Analog Capacitive Soil Moisture Sensor](https://www.ebay.de/itm/164657628668)
 
 
 Pin 6 Überlaufsensor<br/>
 [YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)](https://www.ebay.de/itm/203252815145)
 
-Pin 7 Tanküberprüfung
+Pin 7 Tanküberprüfung<br/>
 [Schwimmerschalter Pegelschalter Füllstandsschalter SensorSchwimmerNiveauschalter](https://www.ebay.de/itm/384891203932)
 
-Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)
-
+Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)<br/>
 [ICStation ICSE014A 8 Channel, Micro USB, DC 5V, 700mA](http://www.icstation.com/icstation-channel-icse014a-micro-switch-relay-module-upper-computer-control-board-icse014a-p-5185.html)
 
 [Alternative Relaiskarte (benötigt 8x output vom Arduino und Strom)](https://www.ebay.de/itm/252355367721)
 
 [Wasserpumpe bürstenlos 12V, 350mA, 4,2W, 240L/h, Hubhöhe 3m, Anschlüsse da = 8mm, Maße lxbxh=55x37x43mm](https://www.ebay.de/itm/353246497633)
 
-  Magnetventile 12V, <160mA, <3W, 0,6Bar, N/C (normaly closed), Anschlüsse da = 4mm
-  https://www.ebay.de/itm/352962597146
+[Magnetventile 12V, <160mA, <3W, 0,6Bar, N/C (normaly closed), Anschlüsse da = 4mm](https://www.ebay.de/itm/352962597146)
 
-  StepDown Regler 12V zu 5V, 3A max. USB
-  https://www.ebay.de/itm/162759316733
+[StepDown Regler 12V zu 5V, 3A max. USB](https://www.ebay.de/itm/162759316733)
 
-  StepUp Regler 5V zu 12V
-  https://www.ebay.de/itm/201278090992
+[StepUp Regler 5V zu 12V](https://www.ebay.de/itm/201278090992)
 
-  5x Dioden z.B. 1N4004
-  (Rote) LED (zeigt leeren Tank und/oder Überlauf an)
-  Im Elektroladen oder im Netz
+5x Dioden z.B. 1N4004<br/>
+(Rote) LED (zeigt leeren Tank und/oder Überlauf an)<br/>
+Im Elektroladen oder im Netz
 
-  Kabel mit kleinem Querschnitt 0,75mm²?
-  ca. 10m Rot (Sensoren, Magnetventile, sonstiges)
-  ca. 10m Schwarz (Sensoren, Magnetventile, sonstiges)
-  ca. 4m Gelb (Sensorensignal)
-  ca. 4m für das Überlaufsensor Kabel
+Kabel mit kleinem Querschnitt 0,75mm²?
+- ca. 10m Rot (Sensoren, Magnetventile, sonstiges)
+- ca. 10m Schwarz (Sensoren, Magnetventile, sonstiges)
+- ca. 4m Gelb (Sensorensignal)
+- ca. 4m für das Überlaufsensor Kabel
 
-  Schläuche
-  ca.2m di=4mm
-  ca.6m di=8mm
-  Im Baumarkt oder im Netz kaufen
+Schläuche
+- ca.2m di=4mm
+- ca.6m di=8mm
+Im Baumarkt oder im Netz kaufen
 
-  Schlauchverbinder
-  4x T-Stück 8mm
-  5x Adapter von 8mm auf 4mm
-  https://www.ebay.de/itm/311415522853
-
-
-  Kanister min. 10L
-  Im Baumarkt oder im Netz kaufen
+[Schlauchverbinder](https://www.ebay.de/itm/311415522853)
+4x T-Stück 8mm
+5x Adapter von 8mm auf 4mm
+  
+Kanister min. 10L<br/>
+Im Baumarkt oder im Netz kaufen
 
 Tipps
 
@@ -70,19 +63,20 @@ Tipps
 9. Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden. Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll. Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
 
 
-Preise Stand 08.2022
-13  Kanister
-8   Pume
-30  Schläuche
-14  Schlauchverbinder
-30  5x Magnetventile
-9   StepUp Regler (StepDown 3)
-10  Arduino Uno
-10  Relaiskarte 8 Kanäle
-7   5x Feuchtigkeitssensoren
-3   Uberlaufsensor
-5   Tanksensor
-20  Kabel
-1   5x Dioden + LED
-
+Preise Stand 08.2022<br/>
+13  Kanister<br/>
+8   Pume<br/>
+30  Schläuche<br/>
+14  Schlauchverbinder<br/>
+30  5x Magnetventile<br/>
+9   StepUp Regler (StepDown 3)<br/>
+10  Arduino Uno<br/>
+10  Relaiskarte 8 Kanäle<br/>
+7   5x Feuchtigkeitssensoren<br/>
+3   Uberlaufsensor<br/>
+5   Tanksensor<br/>
+20  Kabel<br/>
+1   5x Dioden + LED<br/>
+<br/>
 160€ Summe
+
