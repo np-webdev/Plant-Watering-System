@@ -1,7 +1,6 @@
 # Plant-Watering-System
 
 ## Pflanzen Bewässerungssystem für 5 Pflanzen
-von Niko
 
 [Arduino UNO](https://www.ebay.de/itm/144138039161)
 
@@ -13,7 +12,7 @@ Pin 6 Überlaufsensor<br/>
 [YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)](https://www.ebay.de/itm/203252815145)
 
 Pin 7 Tanküberprüfung<br/>
-[Schwimmerschalter Pegelschalter Füllstandsschalter SensorSchwimmerNiveauschalter](https://www.ebay.de/itm/384891203932)
+[Schwimmerschalter, Pegelschalter, Füllstandsschalter, Niveauschalter](https://www.ebay.de/itm/384891203932)
 
 Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)<br/>
 [ICStation ICSE014A 8 Channel, Micro USB, DC 5V, 700mA](http://www.icstation.com/icstation-channel-icse014a-micro-switch-relay-module-upper-computer-control-board-icse014a-p-5185.html)
@@ -39,19 +38,18 @@ Kabel mit kleinem Querschnitt 0,75mm²?
 - ca. 4m für das Überlaufsensor Kabel
 
 Schläuche
-- ca.2m di=4mm
-- ca.6m di=8mm
+- ca.2m di=4mm<br/>
+- ca.6m di=8mm<br/>
 Im Baumarkt oder im Netz kaufen
 
-[Schlauchverbinder](https://www.ebay.de/itm/311415522853)
-4x T-Stück 8mm
-5x Adapter von 8mm auf 4mm
+Schlauchverbinder<br/>
+[4x T-Stück 8mm](https://www.ebay.de/itm/311415522853)<br/>
+[5x Adapter von 8mm auf 4mm](https://www.ebay.de/itm/311415522853)
   
 Kanister min. 10L<br/>
 Im Baumarkt oder im Netz kaufen
 
 Tipps
-
 1. Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen
 2. Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt ???
 3. Alle Schläuche sollten etwas härter sein damit sie nicht knicken
