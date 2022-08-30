@@ -11,13 +11,10 @@ Pin A1 bis A5 Feuchtigkeitssensoren für die Erde
 
 
 Pin 6 Überlaufsensor
-
 [YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)](https://www.ebay.de/itm/203252815145)
 
 Pin 7 Tanküberprüfung
-
-[Schwimmerschalter Pegelschalter Füllstandsschalter SensorSchwimmerNiveauschalter]
-(https://www.ebay.de/itm/384891203932)
+[Schwimmerschalter Pegelschalter Füllstandsschalter SensorSchwimmerNiveauschalter](https://www.ebay.de/itm/384891203932)
 
 Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)
 
