@@ -1,15 +1,12 @@
 # Plant-Watering-System
-DIY Arduino Project
 
-  Pflanzen Bewässerungssystem für 5 Pflanzen
-  von Niko
+## Pflanzen Bewässerungssystem für 5 Pflanzen
+von Niko
 
-Arduino UNO
-https://www.ebay.de/itm/144138039161
+[Arduino UNO](https://www.ebay.de/itm/144138039161)
 
-  Pin A1 bis A5 Feuchtigkeitssensoren für die Erde
-  Analog Capacitive Soil Moisture Sensor
-  https://www.ebay.de/itm/164657628668
+Pin A1 bis A5 Feuchtigkeitssensoren für die Erde
+[Analog Capacitive Soil Moisture Sensor)(https://www.ebay.de/itm/164657628668)
 
   Pin 6 Überlaufsensor
   YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)
