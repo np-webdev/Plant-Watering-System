@@ -75,5 +75,5 @@ Preise Stand 08.2022<br/>
 5   Tanksensor<br/>
 20  Kabel<br/>
 1   5x Dioden + LED<br/>
-<br/>
+
 160€ Summe
