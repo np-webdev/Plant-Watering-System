@@ -1,40 +1,37 @@
-// 03.09.2022
-// -------------------- HIER WERTE EINSTELLEN --------------------
+  // 03.09.2022
+  // -------------------- HIER WERTE EINSTELLEN --------------------
 
-#include <SoftwareSerial.h>
-SoftwareSerial relaiskarte(8, 9);                                             // RX, TX
+  #include <SoftwareSerial.h>
+  SoftwareSerial relaiskarte(8, 9);                                           // RX, TX
+  int i;                                                                      // Variable für Countdown
+  int vortest = 30;                                                           // Zeit des Vortests in Sekunden
+  int looptime = 120;                                                         // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
+  int loopoverflow = 30;                                                      // Nächste Überprüfung des Überlaufsensors in Minuten
+  int looptank = 1;                                                           // Nächste Überprüfung des Tanksensors in Minuten
+  // bei diesen Sensorwerten wird jede Pflanze gegossen
+  int value1 = 300;                                                           // Blumenkasten R
+  int value2 = 300;                                                           // Blumenkasten L (neuer sensor)
+  int value3 = 300;                                                           // Glas Physalis
+  int value4 = 300;                                                           // Jostabeeren (neuer sensor)
+  int value5 = 310;                                                           // Topf Chili
+  int pump = 10000;                                                           // Zeit wie lange die Pumpe läuft in Milisekunden
 
-int i;                                                                        // Variable für Countdown
-
-int vortest = 30;                                                             // Zeit des Vortests in Sekunden
-int looptime = 120;                                                           // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
-int loopoverflow = 30;                                                       // Nächste Überprüfung des Überlaufsensors in Minuten
-int looptank = 1;                                                             // Nächste Überprüfung des Tanksensors in Minuten
-
-// bei diesen Sensorwerten wird jede Pflanze gegossen
-int value1 = 300;                                                              // Blumenkasten R
-int value2 = 300;                                                              // Blumenkasten L (neuer sensor)
-int value3 = 300;                                                              // Glas Physalis
-int value4 = 240;                                                              // Jostabeeren (neuer sensor)
-int value5 = 310;                                                              // Topf Chili
-
-int pump = 10000;                                                             // Zeit wie lange die Pumpe läuft in Milisekunden
-
-//*************************************************************************************************************************************
+  // **********************************************************************************************************************************
 
 void setup() {
   // RELAISKARTE
-  delay(100);                                                                 // Sicherheitspause
+  delay(1000);                                                                // Sicherheitspause
   relaiskarte.begin(9600);                                                    // Baudrate der Relaiskarte auf 9600 Baud setzen
-  relaiskarte.write((byte)0x50);                                              // Begin
+  relaiskarte.write((byte)0x50);                                              // Startbyte
   delay(1);
-  relaiskarte.write((byte)0x51);                                              // Ende
+  relaiskarte.write((byte)0x51);                                              // Endbyte
+  delay(1);
+  relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
   delay(1);
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
   delay(1000);                                                                // Sicherheitspause damit sich die Spannung stabilisiert
 
-
-  // BAUD RATE UND PINBELEGUNG
+  // ARDUINO BAUD RATE UND PINBELEGUNG
   Serial.begin(9600);                                                         // Serial-Port öffnen und auf 9600 Baud setzen
   pinMode(A1, INPUT);                                                         // Pin A1 Analog IN (Feuchtigkeitssensor1)
   pinMode(A2, INPUT);                                                         // Pin A2 Analog IN (Feuchtigkeitssensor2)
@@ -44,7 +41,6 @@ void setup() {
   pinMode(5, OUTPUT);                                                         // Pin 5 Digital OUT (LED)
   pinMode(6, INPUT);                                                          // Pin 6 Digital IN (Überlaufsensor)
   pinMode(7, INPUT_PULLUP);                                                   // Pin 7 Digital IN (Schwimmerschalter Wassertank)
-
 
   // VORTEST SENSOREN
   Serial.print("\nMesswerte der Sensoren:\n");                                // Textausgabe
@@ -64,27 +60,37 @@ void setup() {
   Serial.println(analogRead(A1));                                             // Sensorwert Ausgabe
   Serial.println(analogRead(A2));                                             // Sensorwert Ausgabe
   Serial.println(analogRead(A3));                                             // Sensorwert Ausgabe
-  Serial.println(analogRead(A4));                                             // Sensorwert Ausgabe
-  Serial.println(analogRead(A5));                                             // Sensorwert Ausgabe
-  delay(1000);                                                                // Textausgabe
-  Serial.print("\nBereit\n\n");                                               // Textausgabe
+  Serial.println(analogRead(A4));                                             // Textausgabe
+  Serial.println(analogRead(A5));                                             // Textausgabe
+  delay(3000);                                                                // Textausgabe
+  Serial.print("\nBereit\n");                                                 // Textausgabe
+  delay(1000);                                                                // Lesepause
+  Serial.print("\nVoreingestellte Werte\n");                                  // Textausgabe
+  Serial.print("Zeit des Vortests in Sekunden\n");                            // Textausgabe
+  Serial.println(vortest);                                                    // Wertausgabe
+  Serial.print("Zeit der gesamten Schleife in Minuten\n");                    // Textausgabe  
+  Serial.println(looptime);                                                   // Wertausgabe
+  Serial.print("Zeit der nächsten Überlaufsensorüberprüfung bei Überschwämmung in Minuten\n"); // Textausgabe
+  Serial.println(loopoverflow);                                               // Wertausgabe
+  Serial.print("Zeit der nächsten Wasserstandsüberprüfung bei leerem Tank in Minuten\n"); // Textausgabe
+  Serial.println(looptank);                                                   // Wertausgabe
+  Serial.print("Gießwerte der einzelnen Sensoren\n");                         // Textausgabe
+  Serial.println(value1), (looptime);                                         // Wertausgabe
+  Serial.println(value2);                                                     // Wertausgabe
+  Serial.println(value3);                                                     // Wertausgabe
+  Serial.println(value4);                                                     // Wertausgabe
+  Serial.println(value5);                                                     // Wertausgabe
+  Serial.print("Zeit des Gießens in Milisekunden\n");                         // Textausgabe
+  Serial.println(pump);                                                       // Wertausgabe
+  delay(1000);                                                                // Lesepause
 
-
-  // RELAISKARTE
-  delay(100);                                                                 // Sicherheitspause
-  relaiskarte.begin(9600);                                                    // Baudrate der Relaiskarte auf 9600 Baud setzen
-  relaiskarte.write((byte)0x50);                                              // Beginn
-  delay(1);
-  relaiskarte.write((byte)0x51);                                              // Ende
-  delay(1);
-  relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
-  delay(1000);                                                                // Sicherheitspause damit sich die Spannung stabilisiert
+  // **********************************************************************************************************************************
+  
 }
-//***************************************************************************************************************************************
 void loop() {
 
   delay(1000);                                                                // Lesepause
-  Serial.print("Loopbeginn\n");                                               // Textausgabe
+  Serial.print("\nLoopbeginn\n");                                             // Textausgabe
 
   // ÜBERLAUFSENSOR
   delay(1000);                                                                // Sicherheitspause
@@ -237,7 +243,6 @@ void loop() {
       Serial.println(analogRead(A3));                                         // Sensorwert Ausgabe
       Serial.println(analogRead(A4));                                         // Sensorwert Ausgabe
       Serial.println(analogRead(A5));                                         // Sensorwert Ausgabe
-      Serial.print("\n");                                                     // Textausgabe
       delay(60000);
     }
   }
