@@ -1,3 +1,4 @@
+// 03.09.2022
 // -------------------- HIER WERTE EINSTELLEN --------------------
 
 #include <SoftwareSerial.h>
@@ -6,15 +7,15 @@ SoftwareSerial relaiskarte(8, 9);                                             //
 int i;                                                                        // Variable für Countdown
 
 int vortest = 30;                                                             // Zeit des Vortests in Sekunden
-int looptime = 60;                                                            // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
-int loopueberlauf = 30;                                                       // Nächste Überprüfung des Überlaufsensors in Minuten
+int looptime = 120;                                                           // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
+int loopoverflow = 30;                                                       // Nächste Überprüfung des Überlaufsensors in Minuten
 int looptank = 1;                                                             // Nächste Überprüfung des Tanksensors in Minuten
 
 // bei diesen Sensorwerten wird jede Pflanze gegossen
 int wert1 = 300;                                                              // Blumenkasten R
-int wert2 = 280;                                                              // Blumenkasten L (neuer sensor)
+int wert2 = 300;                                                              // Blumenkasten L (neuer sensor)
 int wert3 = 300;                                                              // Glas Physalis
-int wert4 = 250;                                                              // Jostabeeren (neuer sensor)
+int wert4 = 240;                                                              // Jostabeeren (neuer sensor)
 int wert5 = 310;                                                              // Topf Chili
 
 int pump = 10000;                                                             // Zeit wie lange die Pumpe läuft in Milisekunden
@@ -92,7 +93,7 @@ void loop() {
   while (!digitalRead(6)) {                                                   // solange Überlaufsensor false (also nass)
     Serial.print("\nALARM! Blumentöpfe laufen über! \nPause bis das Wasser verdunstet ist (Angaben in Minuten)\n");  // Textausgabe
     digitalWrite(5, HIGH);                                                    // LED an
-    i = (loopueberlauf);                                                      // Countdownzeit oben einstellen
+    i = (loopoverflow);                                                       // Countdownzeit oben einstellen
     while (i != 0) {
       for (i; i > 0; i--) {
         Serial.println(i);
