@@ -12,11 +12,11 @@ int loopoverflow = 30;                                                       // 
 int looptank = 1;                                                             // Nächste Überprüfung des Tanksensors in Minuten
 
 // bei diesen Sensorwerten wird jede Pflanze gegossen
-int wert1 = 300;                                                              // Blumenkasten R
-int wert2 = 300;                                                              // Blumenkasten L (neuer sensor)
-int wert3 = 300;                                                              // Glas Physalis
-int wert4 = 240;                                                              // Jostabeeren (neuer sensor)
-int wert5 = 310;                                                              // Topf Chili
+int value1 = 300;                                                              // Blumenkasten R
+int value2 = 300;                                                              // Blumenkasten L (neuer sensor)
+int value3 = 300;                                                              // Glas Physalis
+int value4 = 240;                                                              // Jostabeeren (neuer sensor)
+int value5 = 310;                                                              // Topf Chili
 
 int pump = 10000;                                                             // Zeit wie lange die Pumpe läuft in Milisekunden
 
@@ -134,7 +134,7 @@ void loop() {
   Serial.println(Prozentwert1);                                               // Ausgabe Prozentwert
   Serial.print("Messwert: ");                                                 // Textausgabe
   Serial.println(Feuchtigkeitssensor1);                                       // Sensorwert Ausgabe
-  if (Feuchtigkeitssensor1 < wert1) {                                         // wenn Wert kleiner als ... (feuchte Erde)
+  if (Feuchtigkeitssensor1 < value1) {                                        // wenn Wert kleiner als ... (feuchte Erde)
     Serial.print("Pflanze 1 hat ausreichend Wasser\n");                       // Textausgabe
   } else {
     relaiskarte.write((byte)B01111110);                                       // K1,8 (Relais für Magnetventil und Pumpe)
@@ -154,7 +154,7 @@ void loop() {
   Serial.println(Prozentwert2);                                               // Ausgabe Prozentwert
   Serial.print("Messwert: ");                                                 // Textausgabe
   Serial.println(Feuchtigkeitssensor2);                                       // Sensorwert Ausgabe
-  if (Feuchtigkeitssensor2 < wert2) {                                         // wenn Wert kleiner als ... (feuchte Erde)
+  if (Feuchtigkeitssensor2 < value2) {                                        // wenn Wert kleiner als ... (feuchte Erde)
     Serial.print("Pflanze 2 hat ausreichend Wasser\n");                       // Textausgabe
   } else {
     relaiskarte.write((byte)B10111110);                                       // K2,8 (Relais für Magnetventil und Pumpe)
@@ -174,7 +174,7 @@ void loop() {
   Serial.println(Prozentwert3);                                               // Ausgabe Prozentwert
   Serial.print("Messwert: ");                                                 // Textausgabe
   Serial.println(Feuchtigkeitssensor3);                                       // Sensorwert Ausgabe
-  if (Feuchtigkeitssensor3 < wert3) {                                         // wenn Wert kleiner als ... (feuchte Erde)
+  if (Feuchtigkeitssensor3 < value3) {                                        // wenn Wert kleiner als ... (feuchte Erde)
     Serial.print("Pflanze 3 hat ausreichend Wasser\n");                       // Textausgabe
   } else {
     relaiskarte.write((byte)B11011110);                                       // K3,8 (Relais für Magnetventil und Pumpe)
@@ -194,7 +194,7 @@ void loop() {
   Serial.println(Prozentwert4);                                               // Ausgabe Prozentwert
   Serial.print("Messwert: ");                                                 // Textausgabe
   Serial.println(Feuchtigkeitssensor4);                                       // Sensorwert Ausgabe
-  if (Feuchtigkeitssensor4 < wert4) {                                         // wenn Wert kleiner als ... (feuchte Erde)
+  if (Feuchtigkeitssensor4 < value4) {                                        // wenn Wert kleiner als ... (feuchte Erde)
     Serial.print("Pflanze 4 hat ausreichend Wasser\n");                       // Textausgabe
   } else {
     relaiskarte.write((byte)B11101110);                                       // K4,8 (Relais für Magnetventil und Pumpe)
@@ -214,7 +214,7 @@ void loop() {
   Serial.println(Prozentwert5);                                               // Ausgabe Prozentwert
   Serial.print("Messwert: ");                                                 // Textausgabe
   Serial.println(Feuchtigkeitssensor5);                                       // Sensorwert Ausgabe
-  if (Feuchtigkeitssensor5 < wert5) {                                         // wenn Wert kleiner als ... (feuchte Erde)
+  if (Feuchtigkeitssensor5 < value5) {                                        // wenn Wert kleiner als ... (feuchte Erde)
     Serial.print("Pflanze 5 hat ausreichend Wasser\n");                       // Textausgabe
   } else {
     relaiskarte.write((byte)B11110110);                                       // K5,8 (Relais für Magnetventil und Pumpe)
