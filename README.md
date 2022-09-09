@@ -2,11 +2,36 @@
 
 ## Pflanzen Bewässerungssystem für 5 Pflanzen
 
-[Arduino UNO](https://www.ebay.de/itm/144138039161)
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/2.%20Feuchtigkeitssensor%20verdeckt.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
+
+
+
+
+[Arduino UNO](https://www.ebay.de/itm/144138039161)<br/>
+oder<br/>
+[Arduino Nano (nicht getestet)](https://www.ebay.de/itm/255283163551)
 
 Pin A1 bis A5 Feuchtigkeitssensoren für die Erde<br/>
 [Analog Capacitive Soil Moisture Sensor](https://www.ebay.de/itm/164657628668)
-
 
 Pin 6 Überlaufsensor<br/>
 [YL-69 Feuchtigkeitssensor (nicht perfekt da kabel korrodieren aber bis jetzt keine Alternative)](https://www.ebay.de/itm/203252815145)
@@ -25,7 +50,7 @@ Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benö
 
 [StepDown Regler 12V zu 5V, 3A max. USB](https://www.ebay.de/itm/162759316733)
 
-[StepUp Regler 5V zu 12V](https://www.ebay.de/itm/201278090992)
+[StepUp Regler 5V zu 12V (fehlerhaft da er überhitzen kann)](https://www.ebay.de/itm/201278090992)
 
 5x Dioden z.B. 1N4004<br/>
 (Rote) LED (zeigt leeren Tank und/oder Überlauf an)<br/>
@@ -44,21 +69,25 @@ Im Baumarkt oder im Netz kaufen
 
 Schlauchverbinder<br/>
 [4x T-Stück 8mm](https://www.ebay.de/itm/311415522853)<br/>
-[5x Adapter von 8mm auf 4mm](https://www.ebay.de/itm/311415522853)
+[5x Reduzierungsstück Adapter von 8mm auf 4mm](https://www.ebay.de/itm/311415522853)
   
-Kanister min. 10L<br/>
+Kanister min. 15L<br/>
 Im Baumarkt oder im Netz kaufen
 
 Tipps
-1. Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen
-2. Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt ???
-3. Alle Schläuche sollten etwas härter sein damit sie nicht knicken
-4. Tropfer sehen cool aus aber es geht auch mit dem Schlauch in der Erde
-5. Darauf achten dass die Pumpe durch die Öffnung des Kanisters passt
-6. Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
-7. StepDown oder StepUp Regler kaufen je nach dem ob man ein 5V oder ein 12V Netzteil hat. Man kann auch eine Powerbank und ein Solarmodul statt einem Netzteil nutzen. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann sonst wird nur gegossen wenn die Sonne nicht scheint.
-8. Der Arduino Uno hat sechs analoge Eingänge für die Feuchtigkeitssensoren. somit könnte man sechs Pflanzen bewässern.
-9. Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden. Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll. Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
+Elektronik:
+1. Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
+2. Arduino, Sensoren und Relaiskarte benötigen 5V. Pumpe und Magnetventile benötigen 12V. Wenn man ein 12V Netzteil oder eine Autobatterie nutzt braucht man einen StepDown regler. Wenn man ein 5V USB Netzteil oder eine Powerbank nutzt braucht man einen StepUp Regler. Man kann auch eine Powerbank/Autobatterie mit einem Solarmodul statt einem Netzteil nutzen um autark zu sein. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann sonst wird nur gegossen wenn die Sonne nicht scheint.
+3. Der Arduino Uno hat sechs analoge Eingänge für die Feuchtigkeitssensoren. somit könnte man sechs Pflanzen bewässern. Der Nano müsste mehr haben.
+4. Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden. Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll. Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
+
+Schläuche:
+1. Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen.
+2. Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
+3. Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
+4. Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8-4 mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
+5. Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Maße Pumpe LxBxH=55x37x43mm
+
 
 
 Preise Stand 08.2022<br/>
@@ -74,6 +103,8 @@ Preise Stand 08.2022<br/>
 3   Uberlaufsensor<br/>
 5   Tanksensor<br/>
 20  Kabel<br/>
+    USB Kabel<br/>
+    USB Hub<br/>
 1   5x Dioden + LED<br/>
 
 160€ Summe
