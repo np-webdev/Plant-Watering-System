@@ -31,7 +31,7 @@
 
 ❮img src="img/Tropfer2.jpg" width="100" ❯
 
-❮img src="img/test.png" width="100" ❯
+❮img src="test.png"❯
 
 
 
