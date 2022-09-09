@@ -2,9 +2,9 @@
 
 ## Pflanzen Bewässerungssystem für 5 Pflanzen
 
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+❮img src="/img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
 
-❮img src="img/2.%20Feuchtigkeitssensor%20verdeckt.jpg" width="100" ❯
+❮img src="img/2. Feuchtigkeitssensor verdeckt.jpg" width="100" ❯
 
 ❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
 
@@ -73,6 +73,7 @@ Schlauchverbinder<br/>
   
 Kanister min. 15L<br/>
 Im Baumarkt oder im Netz kaufen
+<br/>
 
 Tipps
 Elektronik:
@@ -87,8 +88,7 @@ Schläuche:
 3. Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
 4. Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8-4 mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
 5. Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Maße Pumpe LxBxH=55x37x43mm
-
-
+<br/>
 
 Preise Stand 08.2022<br/>
 13  Kanister<br/>
