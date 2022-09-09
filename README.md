@@ -2,9 +2,18 @@
 
 ## Pflanzen Bewässerungssystem für 5 Pflanzen
 
+❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
 ❮img src="/img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
 
+❮img src="./img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
+
 ❮img src="img/2. Feuchtigkeitssensor verdeckt.jpg" width="100" ❯
+
+❮img src="/img/2. Feuchtigkeitssensor verdeckt.jpg" width="100" ❯
+
+❮img src="./img/2. Feuchtigkeitssensor verdeckt.jpg" width="100" ❯
+
 
 ❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
 
