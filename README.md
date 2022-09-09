@@ -1,38 +1,34 @@
 # Plant-Watering-System
 
 ## Pflanzen Bewässerungssystem für 5 Pflanzen
+<br/>
+Arduino, Relaiskarte und Überlaufsensor YL69<br/>
+<img src="img/1._Arduino,_Relaiskarte_und_Sensor YL69.jpg" width="300"><br/><br/>
+Feuchtigkeitssensoren
 
-![](./img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg)
-
-![](img/2.%20Feuchtigkeitssensor%20verdeckt.jpg)
-
-❮img src="/test.png"❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/2.%20Feuchtigkeitssensor%20verdeckt.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/1.%20Arduino,%20Relaiskarte%20und%20Sensor%20YL69.jpg" width="100" ❯
-
-❮img src="img/Tropfer2.jpg" width="100" ❯
-
-
-
-
-
-
+<img src="img/2._Feuchtigkeitssensor_verdeckt.jpg" width="200">
+<img src="img/3._Feuchtigkeitssensor_mit_heißkleber.jpg" width="200">
+<img src="img/3._Feuchtigkeitssensor_neu.jpg" width="200">
+<img src="img/3._Feuchtigkeitssensor_neu_komplett.jpg" width="200">
+<br/><br/>
+Wassertank, Pumpe und Schwimmerschalter<br/>
+<img src="img/4._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200">
+<img src="img/4a._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200">
+<br/><br/>
+Wasserschläuche mit T-Stücken und Magnetventilen<br/>
+<img src="img/5._Schläuche,_T-Stücke.jpg" width="200">
+<img src="img/6._Magnetventil.jpg" width="200">
+<img src="img/7._Magnetventil.jpg" width="200">
+<br/><br/>
+Spannungsversorgung<br/>
+<img src="img/8._Powerbank.jpg" width="200">
+<img src="img/9._Solarmodul.jpg" width="200">
+<img src="img/10._Netzteil_12V.jpg" width="200">
+<br/><br/>
+Tropfer<br/>
+<img src="img/Tropfer.jpg" width="200">
+<img src="img/Tropfer2.jpg" width="200">
+<br/><br/>
 
 [Arduino UNO](https://www.ebay.de/itm/144138039161)<br/>
 oder<br/>
@@ -81,22 +77,22 @@ Schlauchverbinder<br/>
   
 Kanister min. 15L<br/>
 Im Baumarkt oder im Netz kaufen
-<br/>
+<br/><br/>
 
 Tipps
 Elektronik:
-1. Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
-2. Arduino, Sensoren und Relaiskarte benötigen 5V. Pumpe und Magnetventile benötigen 12V. Wenn man ein 12V Netzteil oder eine Autobatterie nutzt braucht man einen StepDown regler. Wenn man ein 5V USB Netzteil oder eine Powerbank nutzt braucht man einen StepUp Regler. Man kann auch eine Powerbank/Autobatterie mit einem Solarmodul statt einem Netzteil nutzen um autark zu sein. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann sonst wird nur gegossen wenn die Sonne nicht scheint.
-3. Der Arduino Uno hat sechs analoge Eingänge für die Feuchtigkeitssensoren. somit könnte man sechs Pflanzen bewässern. Der Nano müsste mehr haben.
-4. Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden. Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll. Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
+- Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
+- Arduino, Sensoren und Relaiskarte benötigen 5V. Pumpe und Magnetventile benötigen 12V. Wenn man ein 12V Netzteil oder eine Autobatterie nutzt braucht man einen StepDown regler. Wenn man ein 5V USB Netzteil oder eine Powerbank nutzt braucht man einen StepUp Regler. Man kann auch eine Powerbank/Autobatterie mit einem Solarmodul statt einem Netzteil nutzen um autark zu sein. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann sonst wird nur gegossen wenn die Sonne nicht scheint.
+- Der Arduino Uno hat sechs analoge Eingänge für die Feuchtigkeitssensoren. somit könnte man sechs Pflanzen bewässern. Der Nano müsste mehr haben.
+- Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden. Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll. Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
 
 Schläuche:
-1. Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen.
-2. Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
-3. Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
-4. Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8-4 mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
-5. Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Maße Pumpe LxBxH=55x37x43mm
-<br/>
+- Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen.
+- Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
+-Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
+- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8-4 mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
+- Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Maße Pumpe LxBxH=55x37x43mm
+<br/><br/>
 
 Preise Stand 08.2022<br/>
 13  Kanister<br/>
