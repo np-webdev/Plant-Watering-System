@@ -88,8 +88,8 @@ Preise Stand 08.2022<br/>
 
 
 
-| <img src="https://media.wired.com/photos/5926db217034dc5f91becd6b/master/w_582,c_limit/so-logo-s.jpg" width="250"> |
-<img src="https://mk0jobadderjftub56m0.kinstacdn.com/wp-content/uploads/stackoverflow.com-300.jpg" width="250"> | 
+| <img src="img/2._Feuchtigkeitssensor_verdeckt.jpg" width="200"> |
+<img src="img/3._Feuchtigkeitssensor_mit_heißkleber.jpg" width="200"> | 
 
 
 <br/>
