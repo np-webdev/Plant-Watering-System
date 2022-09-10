@@ -96,10 +96,9 @@ Preise Stand 08.2022<br/>
 Arduino, Relaiskarte und Überlaufsensor YL69<br/>
 <img src="img/1._Arduino,_Relaiskarte_und_Sensor YL69.jpg" width="300"><br/><br/>
 Feuchtigkeitssensoren
-|<img src="img/2._Feuchtigkeitssensor_verdeckt.jpg" width="200">
-|<img src="img/3._Feuchtigkeitssensor_mit_heißkleber.jpg" width="200">
-|<img src="img/3._Feuchtigkeitssensor_neu.jpg" width="200">
-|<img src="img/3._Feuchtigkeitssensor_neu_komplett.jpg" width="200">|
+| <img src="img/2._Feuchtigkeitssensor_verdeckt.jpg" width="200"> | <img src="img/3._Feuchtigkeitssensor_mit_heißkleber.jpg" width="200">
+| <img src="img/3._Feuchtigkeitssensor_neu.jpg" width="200">
+| <img src="img/3._Feuchtigkeitssensor_neu_komplett.jpg" width="200"> |
 <br/><br/>
 Wassertank, Pumpe und Schwimmerschalter<br/>
 |<img src="img/4._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200">
