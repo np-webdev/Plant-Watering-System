@@ -78,7 +78,8 @@ Kanister min. 15L<br/>
 Im Baumarkt oder im Netz kaufen
 <br/><br/>
 
-Tipps<br/>
+Tipps
+
 Elektronik:
 - Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
 - Arduino, Sensoren und Relaiskarte benötigen 5V. Pumpe und Magnetventile benötigen 12V. Wenn man ein 12V Netzteil oder eine Autobatterie nutzt braucht man einen StepDown regler. Wenn man ein 5V USB Netzteil oder eine Powerbank nutzt braucht man einen StepUp Regler. Man kann auch eine Powerbank/Autobatterie mit einem Solarmodul statt einem Netzteil nutzen um autark zu sein. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann sonst wird nur gegossen wenn die Sonne nicht scheint.
@@ -111,32 +112,5 @@ Preise Stand 08.2022<br/>
 1   5x Dioden + LED<br/>
 
 160€ Summe
-
-
-<br/>
-Arduino, Relaiskarte und Überlaufsensor YL69<br/>
-<img src="img/1._Arduino,_Relaiskarte_und_Sensor YL69.jpg" width="300"><br/><br/>
-Feuchtigkeitssensoren
-| <img src="img/2._Feuchtigkeitssensor_verdeckt.jpg" width="200"> | <img src="img/3._Feuchtigkeitssensor_mit_heißkleber.jpg" width="200">
-| <img src="img/3._Feuchtigkeitssensor_neu.jpg" width="200">
-| <img src="img/3._Feuchtigkeitssensor_neu_komplett.jpg" width="200"> |
-<br/><br/>
-Wassertank, Pumpe und Schwimmerschalter<br/>
-|<img src="img/4._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200">
-|<img src="img/4a._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200">|
-<br/><br/>
-Wasserschläuche mit T-Stücken und Magnetventilen<br/>
-|<img src="img/5._Schläuche,_T-Stücke.jpg" width="200">
-|<img src="img/6._Magnetventil.jpg" width="200">
-|<img src="img/7._Magnetventil.jpg" width="200">|
-<br/><br/>
-Spannungsversorgung<br/>
-|<img src="img/8._Powerbank.jpg" width="200">
-|<img src="img/9._Solarmodul.jpg" width="200">
-|<img src="img/10._Netzteil_12V.jpg" width="200">|
-<br/><br/>
-Tropfer<br/>
-<img src="img/Tropfer.jpg" width="200">
-<img src="img/Tropfer2.jpg" width="200">
 
 
