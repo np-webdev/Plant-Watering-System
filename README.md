@@ -19,7 +19,7 @@
 |-|-|-|
 |<img src="img/5._Schläuche,_T-Stücke.jpg" width="200"> | <img src="img/6._Magnetventil.jpg" width="200"> | <img src="img/7._Magnetventil.jpg" width="200"> |
 
-| Spannungsversorgung | | |
+| Powerbank | Solarmodul | 12V Netzteil |
 |-|-|-|
 | <img src="img/8._Powerbank.jpg" width="200"> | <img src="img/9._Solarmodul.jpg" width="200"> | <img src="img/10._Netzteil_12V.jpg" width="200"> |
 
