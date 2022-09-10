@@ -3,6 +3,31 @@
 ## Pflanzen Bewässerungssystem für 5 Pflanzen
 
 
+| Arduino, Relaiskarte und Überlaufsensor YL69 |
+|-|
+| <img src="img/1._Arduino,_Relaiskarte_und_Sensor YL69.jpg" width="300"> |
+
+| Feuchtigkeitssensoren | | | |
+|-|-|-|-|
+| <img src="img/2._Feuchtigkeitssensor_verdeckt.jpg" width="200"> | <img src="img/3._Feuchtigkeitssensor_mit_heißkleber.jpg" width="200"> | <img src="img/3._Feuchtigkeitssensor_neu.jpg" width="200"> | <img src="img/3._Feuchtigkeitssensor_neu_komplett.jpg" width="200"> |
+
+| Pumpe und Schwimmerschalter | Wassertank |
+|-|-|
+| <img src="img/4._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200"> | <img src="img/4a._Tank,_Pumpe,_Schwimmerschalter.jpg" width="200"> |
+
+| Wasserschläuche mit T-Stücken | Magnetventil | Magnetventil |
+|-|-|-|
+|<img src="img/5._Schläuche,_T-Stücke.jpg" width="200"> | <img src="img/6._Magnetventil.jpg" width="200"> | <img src="img/7._Magnetventil.jpg" width="200"> |
+
+| Spannungsversorgung | | |
+|-|-|-|
+| <img src="img/8._Powerbank.jpg" width="200"> | <img src="img/9._Solarmodul.jpg" width="200"> | <img src="img/10._Netzteil_12V.jpg" width="200"> |
+
+| Tropfer | |
+|-|-|
+| <img src="img/Tropfer.jpg" width="200"> | <img src="img/Tropfer2.jpg" width="200"> |
+
+
 [Arduino UNO](https://www.ebay.de/itm/144138039161)<br/>
 oder<br/>
 [Arduino Nano (nicht getestet)](https://www.ebay.de/itm/255283163551)
