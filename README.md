@@ -27,6 +27,7 @@
 |-|-|
 | <img src="img/Tropfer.jpg" width="200"> | <img src="img/Tropfer2.jpg" width="200"> |
 
+<br/>
 
 [Arduino UNO](https://www.ebay.de/itm/144138039161)<br/>
 oder<br/>
@@ -77,14 +78,14 @@ Kanister min. 15L<br/>
 Im Baumarkt oder im Netz kaufen
 <br/><br/>
 
-Tipps
+Tipps<br/>
 Elektronik:
 - Die Dioden werden unbedingt benötigt da der Arduino sonst von der Selbstinduktionsspannung der Magnetventile einen Stromschlag bekommt (trotz der Relais)
 - Arduino, Sensoren und Relaiskarte benötigen 5V. Pumpe und Magnetventile benötigen 12V. Wenn man ein 12V Netzteil oder eine Autobatterie nutzt braucht man einen StepDown regler. Wenn man ein 5V USB Netzteil oder eine Powerbank nutzt braucht man einen StepUp Regler. Man kann auch eine Powerbank/Autobatterie mit einem Solarmodul statt einem Netzteil nutzen um autark zu sein. Es wäre vom Vorteil wenn die Powerbank gleichzeitig laden und entladen kann sonst wird nur gegossen wenn die Sonne nicht scheint.
 - Der Arduino Uno hat sechs analoge Eingänge für die Feuchtigkeitssensoren. somit könnte man sechs Pflanzen bewässern. Der Nano müsste mehr haben.
 - Die Feuchtigkeitssensoren für die Erde sind nicht ganz präzise und müssten für jede Pflanze selbst eingestellt werden. Wenn die Elektronik des Sensors nass wird meldet er dem Arduino "Trocken" und übergießt die Pflanzen. Daher ist der Überlaufsensor sinnvoll. Bei Benutzung von Tropfern sollte man die Sensoren vor Wasser schützen z.B. alte Deckel in denen man ein Loch für die Kabel bohrt
 
-Schläuche:
+Schläuche und mehr:
 - Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen.
 - Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
 -Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
