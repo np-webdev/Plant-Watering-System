@@ -74,7 +74,7 @@ Schlauchverbinder<br/>
 [4x T-Stück 8mm](https://www.ebay.de/itm/311415522853)<br/>
 [5x Reduzierungsstück Adapter von 8mm auf 4mm](https://www.ebay.de/itm/311415522853)
   
-Kanister min. 15L<br/>
+Kanister min. 15L, Standardisierte Öffnung 48mm, DIN 61 <br/>
 Im Baumarkt oder im Netz kaufen
 <br/><br/>
 
@@ -89,9 +89,9 @@ Elektronik:
 Schläuche und mehr:
 - Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen.
 - Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
--Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
-- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8-4 mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
-- Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Maße Pumpe LxBxH=55x37x43mm
+- Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
+- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8mm auf 4mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
+- Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Viele Kanister haben eine standardisierte Öffnung mit 48mm DIN 61. Maße Pumpe LxBxH=55x37x43mm.
 <br/><br/>
 
 Preise Stand 08.2022<br/>
