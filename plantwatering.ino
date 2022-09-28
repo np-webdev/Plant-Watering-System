@@ -4,7 +4,7 @@
   #include <SoftwareSerial.h>
   SoftwareSerial relaiskarte(8, 9);                                           // RX, TX
   int i;                                                                      // Variable für Countdown
-  int vortest = 20 ;                                                          // Zeit des Vortests in Sekunden
+  int vortest = 20;                                                           // Zeit des Vortests in Sekunden
   int looptime = 120;                                                         // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
   int loopoverflow = 30;                                                      // Nächste Überprüfung des Überlaufsensors in Minuten
   int looptank = 1;                                                           // Nächste Überprüfung des Tanksensors in Minuten
@@ -26,7 +26,7 @@ void setup() {
   relaiskarte.write((byte)0x50);                                              // Startbyte (Fehler: öffnet Relais K1,3,5,8)
   delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)0x51);                                              // Endbyte (Fehler: öffnet Relais K1,3,5)
-  delay(4);
+  delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)B11111101);                                         // K7 öfnen (unbenutztes Relais)
   delay(100);                                                                 // kurzes klicken
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
