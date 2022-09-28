@@ -1,10 +1,10 @@
-  // 19.09.2022
+  // 28.09.2022
   // -------------------- HIER WERTE EINSTELLEN --------------------
 
   #include <SoftwareSerial.h>
   SoftwareSerial relaiskarte(8, 9);                                           // RX, TX
   int i;                                                                      // Variable für Countdown
-  int vortest = 20;                                                           // Zeit des Vortests in Sekunden
+  int vortest = 20 ;                                                          // Zeit des Vortests in Sekunden
   int looptime = 120;                                                         // Nächste Überprüfung der Feuchtigkeitssensoren in Minuten
   int loopoverflow = 30;                                                      // Nächste Überprüfung des Überlaufsensors in Minuten
   int looptank = 1;                                                           // Nächste Überprüfung des Tanksensors in Minuten
@@ -28,11 +28,11 @@ void setup() {
   relaiskarte.write((byte)0x51);                                              // Endbyte (Fehler: öffnet Relais K1,3,5)
   delay(4);
   relaiskarte.write((byte)B11111101);                                         // K7 öfnen (unbenutztes Relais)
-  delay(200);                                                                 // kurzes klicken
+  delay(100);                                                                 // kurzes klicken
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
-  delay(200);
+  delay(100);
   relaiskarte.write((byte)B11111101);                                         // K7 öfnen (unbenutztes Relais)
-  delay(200);
+  delay(100);
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
   delay(100);                                                                 // Sicherheitspause
 
@@ -71,21 +71,21 @@ void setup() {
   Serial.print("\nBereit\n");                                                 // Textausgabe
   delay(1000);                                                                // Lesepause
   Serial.print("\nVoreingestellte Werte\n");                                  // Textausgabe
-  Serial.print("Zeit des Vortests in Sekunden\n");                            // Textausgabe
+  Serial.print("Vortestzeit s: ");                                            // Textausgabe
   Serial.println(vortest);                                                    // Wertausgabe
-  Serial.print("Zeit der gesamten Schleife in Minuten\n");                    // Textausgabe  
+  Serial.print("Gesamte Loopzeit m: ");                                       // Textausgabe  
   Serial.println(looptime);                                                   // Wertausgabe
-  Serial.print("Zeit der nächsten Überlaufsensorüberprüfung bei Überschwämmung in Minuten\n"); // Textausgabe
+  Serial.print("Zeit Überlaufsensorloop m: ");                                // Textausgabe
   Serial.println(loopoverflow);                                               // Wertausgabe
-  Serial.print("Zeit der nächsten Wasserstandsüberprüfung bei leerem Tank in Minuten\n"); // Textausgabe
+  Serial.print("Zeit Schwimmerloop m: ");                                     // Textausgabe
   Serial.println(looptank);                                                   // Wertausgabe
-  Serial.print("Gießwerte der einzelnen Sensoren\n");                         // Textausgabe
+  Serial.print("Gießwerte Feuchtigkeitssensoren:\n");                         // Textausgabe
   Serial.println(value1);                                                     // Wertausgabe
   Serial.println(value2);                                                     // Wertausgabe
   Serial.println(value3);                                                     // Wertausgabe
   Serial.println(value4);                                                     // Wertausgabe
   Serial.println(value5);                                                     // Wertausgabe
-  Serial.print("Zeit des Gießens in Milisekunden\n");                         // Textausgabe
+  Serial.print("Gießzeit ms: ");                                              // Textausgabe
   Serial.println(pump);                                                       // Wertausgabe
   delay(1000);                                                                // Lesepause
 
@@ -130,112 +130,98 @@ void loop() {
   digitalWrite(5, LOW);                                                       // LED aus
   Serial.print("\nWasserstand im Tank ist über minimum\n");                   // Textausgabe
 
+  int Feuchtigkeitssensor1 = analogRead(A1);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
+  int Feuchtigkeitssensor2 = analogRead(A2);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
+  int Feuchtigkeitssensor3 = analogRead(A3);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
+  int Feuchtigkeitssensor4 = analogRead(A4);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
+  int Feuchtigkeitssensor5 = analogRead(A5);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
+
   // SENSOR 1 (Blumenkasten R)
   delay(1000);                                                                // Lesepause
-  int Feuchtigkeitssensor1 = analogRead(A1);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
-  int Prozentwert1 = map(Feuchtigkeitssensor1, 30, 600, 100, 0);              // ungefähre Prozentangabe durch Mapping
-  Serial.print("\n\nPflanze 1 (Blumenkasten R) \nFeuchtigkeit in prozent: "); // Textausgabe
-  Serial.println(Prozentwert1);                                               // Ausgabe Prozentwert
-  Serial.print("Messwert: ");                                                 // Textausgabe
-  Serial.println(Feuchtigkeitssensor1);                                       // Sensorwert Ausgabe
   if (Feuchtigkeitssensor1 < value1) {                                        // wenn Wert kleiner als ... (feuchte Erde)
-    Serial.print("Pflanze 1 hat ausreichend Wasser\n");                       // Textausgabe
+    Serial.print("\n1. Blumenkasten R hat ausreichend Wasser\nMesswert: ");   // Textausgabe
+    Serial.println(Feuchtigkeitssensor1);                                     // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (unbenutztes Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B01111110);                                       // K1,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("Pflanze 1 wird gegossen\n");                                // Textausgabe
+    Serial.print("\n1. Blumenkasten R wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor1);                                     // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
   // SENSOR 2 (Blumenkasten L)
   delay(1000);                                                                // Lesepause
-  int Feuchtigkeitssensor2 = analogRead(A2);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
-  int Prozentwert2 = map(Feuchtigkeitssensor2, 30, 600, 100, 0);              // ungefähre Prozentangabe durch Mapping
-  Serial.print("\nPflanze 2 (Blumenkasten L) \nFeuchtigkeit in prozent: ");   // Textausgabe
-  Serial.println(Prozentwert2);                                               // Ausgabe Prozentwert
-  Serial.print("Messwert: ");                                                 // Textausgabe
-  Serial.println(Feuchtigkeitssensor2);                                       // Sensorwert Ausgabe
   if (Feuchtigkeitssensor2 < value2) {                                        // wenn Wert kleiner als ... (feuchte Erde)
-    Serial.print("Pflanze 2 hat ausreichend Wasser\n");                       // Textausgabe
+    Serial.print("\n2. Blumenkasten L hat ausreichend Wasser\nMesswert: ");   // Textausgabe
+    Serial.println(Feuchtigkeitssensor2);                                     // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (unbenutztes Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B10111110);                                       // K2,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("Pflanze 2 wird gegossen\n");                                // Textausgabe
+    Serial.print("\n2. Blumenkasten L wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor2);                                     // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
   // SENSOR 3 (Glas Physalis)
   delay(1000);                                                                // Lesepause
-  int Feuchtigkeitssensor3 = analogRead(A3);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
-  int Prozentwert3 = map(Feuchtigkeitssensor3, 30, 600, 100, 0);              // ungefähre Prozentangabe durch Mapping
-  Serial.print("\nPflanze 3 (Glas Physalis) \nFeuchtigkeit in prozent: ");    // Textausgabe
-  Serial.println(Prozentwert3);                                               // Ausgabe Prozentwert
-  Serial.print("Messwert: ");                                                 // Textausgabe
-  Serial.println(Feuchtigkeitssensor3);                                       // Sensorwert Ausgabe
   if (Feuchtigkeitssensor3 < value3) {                                        // wenn Wert kleiner als ... (feuchte Erde)
-    Serial.print("Pflanze 3 hat ausreichend Wasser\n");                       // Textausgabe
+    Serial.print("\n3. Glas Physalis hat ausreichend Wasser\nMesswert: ");    // Textausgabe
+    Serial.println(Feuchtigkeitssensor3);                                     // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (unbenutztes Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11011110);                                       // K3,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("Pflanze 3 wird gegossen\n");                                // Textausgabe
+    Serial.print("\n3. Glas Physalis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor3);                                     // Sensorwert Ausgabe
     delay(10000);                                                             // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
   // SENSOR 4 (Topf Jostabeeren)
   delay(1000);                                                                // Lesepause
-  int Feuchtigkeitssensor4 = analogRead(A4);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
-  int Prozentwert4 = map(Feuchtigkeitssensor4, 200, 600, 100, 0);             // ungefähre Prozentangabe durch Mapping
-  Serial.print("\nPflanze 4 (Topf Jostabeeren) \nFeuchtigkeit in prozent: "); // Textausgabe
-  Serial.println(Prozentwert4);                                               // Ausgabe Prozentwert
-  Serial.print("Messwert: ");                                                 // Textausgabe
-  Serial.println(Feuchtigkeitssensor4);                                       // Sensorwert Ausgabe
   if (Feuchtigkeitssensor4 < value4) {                                        // wenn Wert kleiner als ... (feuchte Erde)
-    Serial.print("Pflanze 4 hat ausreichend Wasser\n");                       // Textausgabe
+    Serial.print("\n4. Topf Jostabeeren hat ausreichend Wasser\nMesswert: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor4);                                     // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (unbenutztes Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11101110);                                       // K4,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("Pflanze 4 wird gegossen\n");                                // Textausgabe
+    Serial.print("\n4. Topf Jostabeeren wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor4);                                     // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
   // SENSOR 5 (Topf kleine Chilis)
   delay(1000);                                                                // Lesepause
-  int Feuchtigkeitssensor5 = analogRead(A5);                                  // Pinsignal in Variable Feuchtigkeitssensor speichern
-  int Prozentwert5 = map(Feuchtigkeitssensor5, 30, 600, 100, 0);              // ungefähre Prozentangabe durch Mapping
-  Serial.print("\nPflanze 5 (Topf kleine Chilis) \nFeuchtigkeit in prozent: "); // Textausgabe
-  Serial.println(Prozentwert5);                                               // Ausgabe Prozentwert
-  Serial.print("Messwert: ");                                                 // Textausgabe
-  Serial.println(Feuchtigkeitssensor5);                                       // Sensorwert Ausgabe
   if (Feuchtigkeitssensor5 < value5) {                                        // wenn Wert kleiner als ... (feuchte Erde)
-    Serial.print("Pflanze 5 hat ausreichend Wasser\n");                       // Textausgabe
+    Serial.print("\n5. Topf kleine Chilis hat ausreichend Wasser\nMesswert: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor5);                                     // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (unbenutztes Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11110110);                                       // K5,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("Pflanze 5 wird gegossen\n");                                // Textausgabe
+    Serial.print("\n5. Topf kleine Chilis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.println(Feuchtigkeitssensor5);                                     // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
-
+/**/
   // ENDE
   delay(1000); // Lesepause
   i = (looptime);                                                             // Countdownzeit oben einstellen
   while (i != 0) {
     for (i; i > 0; i--) {
-      Serial.print("\nNächste Überprüfung sobald der Countdown abläuft (Angaben in Minuten)\n");  // Textausgabe
+      Serial.print("\nNächste Überprüfung in Minuten: ");                     // Textausgabe
       Serial.println(i);
       delay(1000);                                                            // Lesepause
       Serial.print("\nMesswerte der Sensoren:\n");                            // Textausgabe
