@@ -95,22 +95,22 @@ Schläuche und mehr:
 <br/><br/>
 
 Preise Stand 08.2022<br/>
-13  Kanister<br/>
-8   Pume<br/>
-30  Schläuche<br/>
-14  Schlauchverbinder<br/>
-30  5x Magnetventile<br/>
-9   StepUp Regler (StepDown 3)<br/>
-10  Arduino Uno<br/>
-10  Relaiskarte 8 Kanäle<br/>
-7   5x Feuchtigkeitssensoren<br/>
-3   Uberlaufsensor<br/>
-5   Tanksensor<br/>
-20  Kabel<br/>
-    USB Kabel<br/>
-    USB Hub<br/>
-1   5x Dioden + LED<br/>
+| Preis | Artikel |
+| 13 | Kanister<br/> |
+| 8 | Pume<br/> |
+| 30 | Schläuche<br/> |
+| 14 | Schlauchverbinder<br/> |
+| 30 | 5x Magnetventile<br/> |
+| 9 | StepUp Regler (StepDown 3)<br/> |
+| 10 | Arduino Uno<br/> |
+| 10 | Relaiskarte 8 Kanäle<br/> |
+| 7 | 5x Feuchtigkeitssensoren<br/> |
+| 3 | Uberlaufsensor<br/> |
+| 5 | Tanksensor<br/> |
+| 20 | Kabel<br/> |
+| | USB Kabel<br/> |
+| | USB Hub<br/> |
+| 1 | 5x Dioden + LED<br/> |
 
-160€ Summe
-
+| 160€ | Summe |
 
