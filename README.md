@@ -44,7 +44,7 @@ Pin 7 Tanküberprüfung<br/>
 
 Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benötigt aber nur 2 Signalleitungen und Strom)<br/>
 [ICStation ICSE014A 8 Channel, Micro USB, DC 5V, 700mA](http://www.icstation.com/icstation-channel-icse014a-micro-switch-relay-module-upper-computer-control-board-icse014a-p-5185.html)
-
+oder
 [Alternative Relaiskarte (benötigt 8x output vom Arduino und Strom)](https://www.ebay.de/itm/252355367721)
 
 [Wasserpumpe bürstenlos 12V, 350mA, 4,2W, 240L/h, Hubhöhe 3m, Anschlüsse da = 8mm, Maße lxbxh=55x37x43mm](https://www.ebay.de/itm/353246497633)
@@ -52,7 +52,7 @@ Relaiskarte (diese würde ich nicht empfehlen da die Karte fehlerhaft ist, benö
 [Magnetventile 12V, <160mA, <3W, 0,6Bar, N/C (normaly closed), Anschlüsse da = 4mm](https://www.ebay.de/itm/352962597146)
 
 [StepDown Regler 12V zu 5V, 3A max. USB](https://www.ebay.de/itm/162759316733)
-
+oder
 [StepUp Regler 5V zu 12V (fehlerhaft da er überhitzen kann)](https://www.ebay.de/itm/201278090992)
 
 5x Dioden z.B. 1N4004<br/>
@@ -66,13 +66,13 @@ Kabel mit kleinem Querschnitt 0,75mm²?
 - ca. 4m für das Überlaufsensor Kabel
 
 Schläuche
-- ca.2m di=4mm<br/>
-- ca.6m di=8mm<br/>
+- ca.8m di=4mm<br/>
+- ca. 5cm di=8mm für den Anschluss an der Pumpe<br/>
 Im Baumarkt oder im Netz kaufen
 
 Schlauchverbinder<br/>
 [4x T-Stück 8mm](https://www.ebay.de/itm/311415522853)<br/>
-[5x Reduzierungsstück Adapter von 8mm auf 4mm](https://www.ebay.de/itm/311415522853)
+[1x Reduzierungsstück Adapter von 8mm auf 4mm](https://www.ebay.de/itm/311415522853)
   
 Kanister min. 15L, Standardisierte Öffnung 48mm, DIN 61 <br/>
 Im Baumarkt oder im Netz kaufen
@@ -88,14 +88,16 @@ Elektronik:
 
 Schläuche und mehr:
 - Länge der Schläuche und Kabel muss jeder für sich berechnen. Wenn die Pflanzen nebeneinander stehen reichen die Längen die ich angegeben habe für fünf Pflanzen.
-- Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
-- Alle Schläuche sollten etwas härter sein damit sie nicht knicken.
-- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8mm auf 4mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.
+- Die Schläuche sollten etwas härter sein damit sie nicht knicken.
 - Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Viele Kanister haben eine standardisierte Öffnung mit 48mm DIN 61. Maße Pumpe LxBxH=55x37x43mm.
+
+/*- Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
+- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8mm auf 4mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.*/
 <br/><br/>
 
 Preise Stand 08.2022<br/>
 | Preis | Artikel |
+|-|-|
 | 13 | Kanister<br/> |
 | 8 | Pume<br/> |
 | 30 | Schläuche<br/> |
@@ -111,6 +113,6 @@ Preise Stand 08.2022<br/>
 | | USB Kabel<br/> |
 | | USB Hub<br/> |
 | 1 | 5x Dioden + LED<br/> |
-
+| | |
 | 160€ | Summe |
 
