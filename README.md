@@ -91,8 +91,8 @@ Schläuche und mehr:
 - Die Schläuche sollten etwas härter sein damit sie nicht knicken.
 - Beim Kauf des Kanisters darauf achten dass die Pumpe durch die Öffnung des Kanisters passt. Viele Kanister haben eine standardisierte Öffnung mit 48mm DIN 61. Maße Pumpe LxBxH=55x37x43mm.
 
-/*- Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
-- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8mm auf 4mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss.*/
+<!-- - Die 4mm Schläuche sollten so kurz wie möglich sein da sonst der Druck abfällt.
+- Tropfer sehen cool aus aber es geht auch mit dem Schlauch in die Erde. Sollte man auf Tropfer verzichten, kann man ausschließlich 4mm Schläuche nutzen. Auch die T-Stücke müssten dann 4mm sein und es würde nur ein 8mm auf 4mm Reduzierungsstück benötigt werden nach der Pumpe. Dafür bräuchte man allerdings noch ein kurzes Stück Schlauch l=5cm di=8mm oder eine Pumpe mit 4mm Anschluss. -->
 <br/><br/>
 
 Preise Stand 08.2022<br/>
