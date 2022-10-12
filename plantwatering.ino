@@ -27,25 +27,25 @@ void setup() {
   delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)0x51);                                              // Endbyte (Fehler: öffnet Relais K1,3,5)
   delay(4);                                                                   // Sicherheitspause
-  relaiskarte.write((byte)B11111101);                                         // K7 öfnen (unbenutztes Relais)
+  relaiskarte.write((byte)B11111101);                                         // K7 öffnen (freies Relais)
   delay(100);                                                                 // kurzes klicken
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
   delay(100);
-  relaiskarte.write((byte)B11111101);                                         // K7 öfnen (unbenutztes Relais)
-  delay(100);
+  relaiskarte.write((byte)B11111101);                                         // K7 öffnen (freies Relais)
+  delay(100);                                                                 // kurzes klicken
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
   delay(100);                                                                 // Sicherheitspause
 
   // ARDUINO BAUD RATE UND PINBELEGUNG
   Serial.begin(9600);                                                         // Serial-Port öffnen und auf 9600 Baud setzen
-  pinMode(A1, INPUT);                                                         // Pin A1 Analog IN (Feuchtigkeitssensor1)
-  pinMode(A2, INPUT);                                                         // Pin A2 Analog IN (Feuchtigkeitssensor2)
-  pinMode(A3, INPUT);                                                         // Pin A3 Analog IN (Feuchtigkeitssensor3)
-  pinMode(A4, INPUT);                                                         // Pin A4 Analog IN (Feuchtigkeitssensor4)
-  pinMode(A5, INPUT);                                                         // Pin A5 Analog IN (Feuchtigkeitssensor5)
-  pinMode(5, OUTPUT);                                                         // Pin 5 Digital OUT (LED)
-  pinMode(6, INPUT);                                                          // Pin 6 Digital IN (Überlaufsensor)
-  pinMode(7, INPUT_PULLUP);                                                   // Pin 7 Digital IN (Schwimmerschalter Wassertank)
+  pinMode(A1, INPUT);                                                         // Signal Feuchtigkeitssensor 1
+  pinMode(A2, INPUT);                                                         // Signal Feuchtigkeitssensor 2
+  pinMode(A3, INPUT);                                                         // Signal Feuchtigkeitssensor 3
+  pinMode(A4, INPUT);                                                         // Signal Feuchtigkeitssensor 4
+  pinMode(A5, INPUT);                                                         // Signal Feuchtigkeitssensor 5
+  pinMode(5, OUTPUT);                                                         // Signal Ausgang für LED
+  pinMode(6, INPUT);                                                          // Signal Überlaufsensor
+  pinMode(7, INPUT_PULLUP);                                                   // Signal Schwimmerschalter Wassertank
 
   // VORTEST SENSOREN
   Serial.print("\nMesswerte der Sensoren:\n");                                // Textausgabe
@@ -147,7 +147,7 @@ void loop() {
   } else {
     relaiskarte.write((byte)B01111110);                                       // K1,8 (Relais für Magnetventil und Pumpe)
     Serial.print("\n1. Blumenkasten R wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
-    Serial.println(humSen1);                                     // Sensorwert Ausgabe
+    Serial.println(humSen1);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
@@ -172,30 +172,30 @@ void loop() {
   delay(500);                                                                 // Lesepause
   if (humSen3 < value3) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
     Serial.print("\n3. Glas Physalis hat ausreichend Wasser\nMesswert: ");    // Textausgabe
-    Serial.println(humSen3);                                     // Sensorwert Ausgabe
+    Serial.println(humSen3);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11011110);                                       // K3,8 (Relais für Magnetventil und Pumpe)
     Serial.print("\n3. Glas Physalis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
-    Serial.println(humSen3);                                     // Sensorwert Ausgabe
+    Serial.println(humSen3);                                                  // Sensorwert Ausgabe
     delay(10000);                                                             // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
   // SENSOR 4 (Topf Jostabeeren)
   delay(500);                                                                 // Lesepause
-  if (humSen4 < value4) {                                        // wenn Sensorwert kleiner als ... (feuchte Erde)
+  if (humSen4 < value4) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
     Serial.print("\n4. Topf Jostabeeren hat ausreichend Wasser\nMesswert: "); // Textausgabe
-    Serial.println(humSen4);                                     // Sensorwert Ausgabe
+    Serial.println(humSen4);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11101110);                                       // K4,8 (Relais für Magnetventil und Pumpe)
     Serial.print("\n4. Topf Jostabeeren wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
-    Serial.println(humSen4);                                     // Sensorwert Ausgabe
+    Serial.println(humSen4);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
@@ -204,14 +204,14 @@ void loop() {
   delay(500);                                                                 // Lesepause
   if (humSen5 < value5) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
     Serial.print("\n5. Topf kleine Chilis hat ausreichend Wasser\nMesswert: "); // Textausgabe
-    Serial.println(humSen5);                                     // Sensorwert Ausgabe
+    Serial.println(humSen5);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11110110);                                       // K5,8 (Relais für Magnetventil und Pumpe)
     Serial.print("\n5. Topf kleine Chilis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
-    Serial.println(humSen5);                                     // Sensorwert Ausgabe
+    Serial.println(humSen5);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
