@@ -28,13 +28,13 @@ void setup() {
   relaiskarte.write((byte)0x51);                                              // Endbyte (Fehler: öffnet Relais K1,3,5)
   delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)B11111101);                                         // K7 öffnen (freies Relais)
-  delay(100);                                                                 // kurzes klicken
+  delay(200);                                                                 // kurzes klicken
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
-  delay(100);
+  delay(200);
   relaiskarte.write((byte)B11111101);                                         // K7 öffnen (freies Relais)
-  delay(100);                                                                 // kurzes klicken
+  delay(200);                                                                 // kurzes klicken
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus
-  delay(100);                                                                 // Sicherheitspause
+  delay(200);                                                                 // Sicherheitspause
 
   // ARDUINO BAUD RATE UND PINBELEGUNG
   Serial.begin(9600);                                                         // Serial-Port öffnen und auf 9600 Baud setzen
