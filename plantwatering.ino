@@ -1,4 +1,4 @@
-  // 12.10.2022
+  // 18.10.2022
   // -------------------- HIER WERTE EINSTELLEN --------------------
 
   #include <SoftwareSerial.h>
@@ -22,7 +22,7 @@ void setup() {
   // RELAISKARTE
   delay(4);                                                                   // Sicherheitspause
   relaiskarte.begin(9600);                                                    // Baudrate der Relaiskarte auf 9600 Baud setzen
-  delay(4);											                                              // Sicherheitspause
+  delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)0x50);                                              // Startbyte (Fehler: öffnet Relais K1,3,5,8)
   delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)0x51);                                              // Endbyte (Fehler: öffnet Relais K1,3,5)
@@ -99,7 +99,7 @@ void loop() {
   // ÜBERLAUFSENSOR
   delay(1000);                                                                // Lesepause
   while (!digitalRead(6)) {                                                   // solange Überlaufsensor false (also nass)
-    Serial.print("\nALARM! Blumentöpfe laufen über! \nPause bis das Wasser verdunstet ist (Angaben in Minuten)\n");  // Textausgabe
+    Serial.print("\nALARM! Blumentöpfe laufen über! \nPause bis das Wasser verdunstet ist (Angaben in Minuten)\n"); // Textausgabe
     digitalWrite(5, HIGH);                                                    // LED an
     i = (loopoverflow);                                                       // Countdownzeit oben einstellen
     while (i != 0) {
@@ -163,7 +163,7 @@ void loop() {
   } else {
     relaiskarte.write((byte)B10111110);                                       // K2,8 (Relais für Magnetventil und Pumpe)
     Serial.print("\n2. Blumenkasten L wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
-    Serial.println(humSen2);                                     // Sensorwert Ausgabe
+    Serial.println(humSen2);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
