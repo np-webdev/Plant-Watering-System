@@ -1,4 +1,4 @@
-  // 18.10.2022
+  // 25.10.2022
   // -------------------- HIER WERTE EINSTELLEN --------------------
 
   #include <SoftwareSerial.h>
@@ -20,7 +20,7 @@
 
 void setup() {
   // RELAISKARTE
-  delay(4);                                                                   // Sicherheitspause
+  delay(1000);                                                                // Sicherheitspause
   relaiskarte.begin(9600);                                                    // Baudrate der Relaiskarte auf 9600 Baud setzen
   delay(4);                                                                   // Sicherheitspause
   relaiskarte.write((byte)0x50);                                              // Startbyte (Fehler: öffnet Relais K1,3,5,8)
