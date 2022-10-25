@@ -13,9 +13,8 @@
   int value2 = 300;                                                           // Blumenkasten L (neuer sensor)
   int value3 = 300;                                                           // Glas Physalis
   int value4 = 300;                                                           // Jostabeeren (neuer sensor)
-  int value5 = 320;                                                           // Topf Chili
+  int value5 = 330;                                                           // Topf Chili
   int pump = 10000;                                                           // Zeit wie lange die Pumpe läuft in Milisekunden
-
   // **********************************************************************************************************************************
 
 void setup() {
@@ -180,7 +179,7 @@ void loop() {
     relaiskarte.write((byte)B11011110);                                       // K3,8 (Relais für Magnetventil und Pumpe)
     Serial.print("\n3. Glas Physalis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
     Serial.println(humSen3);                                                  // Sensorwert Ausgabe
-    delay(10000);                                                             // Pumpzeit oben einstellen
+    delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
