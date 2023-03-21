@@ -1,6 +1,6 @@
-  // 25.10.2022
+  // 21.03.2023
   // -------------------- HIER WERTE EINSTELLEN --------------------
-
+  
   #include <SoftwareSerial.h>
   SoftwareSerial relaiskarte(8, 9);                                           // RX, TX
   int i;                                                                      // Variable für Countdown
@@ -135,41 +135,42 @@ void loop() {
   int humSen4 = analogRead(A4);                                               // Pinsignal in Variable Feuchtigkeitssensor speichern
   int humSen5 = analogRead(A5);                                               // Pinsignal in Variable Feuchtigkeitssensor speichern
 
-  // SENSOR 1 (Blumenkasten R)
+  // SENSOR 1 (Blumenkasten R (kleine Chilis))
   delay(1000);                                                                // Lesepause
-  if (humSen1 < value1) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
-    Serial.print("\n1. Blumenkasten R hat ausreichend Wasser\nMesswert: ");   // Textausgabe
+  if (humSen1 < value1) {                                                     // kleiner Sensorwert = feuchte Erde
+    Serial.print("\n1. Blumenkasten R (kleine Chilis) hat ausreichend Wasser\nMesswert: "); // Textausgabe
     Serial.println(humSen1);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B01111110);                                       // K1,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("\n1. Blumenkasten R wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.print("\n1. Blumenkasten R (kleine Chilis) wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
     Serial.println(humSen1);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
-  // SENSOR 2 (Blumenkasten L)
+  // SENSOR 2 (Blumenkasten L, große Chilis)
   delay(500);                                                                 // Lesepause
-  if (humSen2 < value2) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
-    Serial.print("\n2. Blumenkasten L hat ausreichend Wasser\nMesswert: ");   // Textausgabe
+  if (humSen2 < value2) {                                                     // kleiner Sensorwert = feuchte Erde
+    Serial.print("\n2. Blumenkasten L, große Chilis hat ausreichend Wasser\nMesswert: "); // Textausgabe
     Serial.println(humSen2);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B10111110);                                       // K2,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("\n2. Blumenkasten L wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.print("\n2. Blumenkasten L, große Chilis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
     Serial.println(humSen2);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
-  // SENSOR 3 (Glas Physalis)
+/*
+  // SENSOR 3 (Leer)
   delay(500);                                                                 // Lesepause
-  if (humSen3 < value3) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
+  if (humSen3 < value3) {                                                     // kleiner Sensorwert = feuchte Erde
     Serial.print("\n3. Glas Physalis hat ausreichend Wasser\nMesswert: ");    // Textausgabe
     Serial.println(humSen3);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
@@ -182,10 +183,10 @@ void loop() {
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
-
+*/
   // SENSOR 4 (Topf Jostabeeren)
   delay(500);                                                                 // Lesepause
-  if (humSen4 < value4) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
+  if (humSen4 < value4) {                                                     // kleiner Sensorwert = feuchte Erde
     Serial.print("\n4. Topf Jostabeeren hat ausreichend Wasser\nMesswert: "); // Textausgabe
     Serial.println(humSen4);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
@@ -199,22 +200,22 @@ void loop() {
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
-  // SENSOR 5 (Topf kleine Chilis)
+  // SENSOR 5 (Topf Physalis)
   delay(500);                                                                 // Lesepause
-  if (humSen5 < value5) {                                                     // wenn Sensorwert kleiner als ... (feuchte Erde)
-    Serial.print("\n5. Topf kleine Chilis hat ausreichend Wasser\nMesswert: "); // Textausgabe
+  if (humSen5 < value5) {                                                     // kleiner Sensorwert = feuchte Erde
+    Serial.print("\n5. Topf Physalis hat ausreichend Wasser\nMesswert: ");    // Textausgabe
     Serial.println(humSen5);                                                  // Sensorwert Ausgabe
     relaiskarte.write((byte)B11111101);                                       // K7 (freies Relais)
     delay(4);                                                                 // kurzes klicken
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   } else {
     relaiskarte.write((byte)B11110110);                                       // K5,8 (Relais für Magnetventil und Pumpe)
-    Serial.print("\n5. Topf kleine Chilis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
+    Serial.print("\n5. Topf Physalis wird gegossen\nMesswert vor dem Gießen: "); // Textausgabe
     Serial.println(humSen5);                                                  // Sensorwert Ausgabe
     delay(pump);                                                              // Pumpzeit oben einstellen
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
-/**/
+
   // ENDE
   delay(1000);                                                                // Lesepause
   relaiskarte.write((byte)B11111111);                                         // Alle Relais aus (zur Sicherheit noch mal)
