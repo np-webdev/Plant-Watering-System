@@ -11,9 +11,9 @@
   // bei diesen Werten der Feuchtigkeitssensoren wird jede Pflanze gegossen
   int value1 = 330;                                                           // Blumenkasten R
   int value2 = 300;                                                           // Blumenkasten L (neuer sensor)
-  int value3 = 300;                                                           // Glas Physalis
+  int value3 = 300;                                                           // Glas leer
   int value4 = 300;                                                           // Jostabeeren (neuer sensor)
-  int value5 = 330;                                                           // Topf Chili
+  int value5 = 330;                                                           // Topf Physalis
   int pump = 10000;                                                           // Zeit wie lange die Pumpe läuft in Milisekunden
   // **********************************************************************************************************************************
 
@@ -167,8 +167,11 @@ void loop() {
     relaiskarte.write((byte)B11111111);                                       // Alle Relais aus
   }
 
-/*
   // SENSOR 3 (Leer)
+  delay(500);
+  Serial.print("\n3. Glas ist leer und wird nicht gegossen\nMesswert: ");     // Textausgabe
+  Serial.println(humSen3);                                                    // Sensorwert Ausgabe
+/*
   delay(500);                                                                 // Lesepause
   if (humSen3 < value3) {                                                     // kleiner Sensorwert = feuchte Erde
     Serial.print("\n3. Glas Physalis hat ausreichend Wasser\nMesswert: ");    // Textausgabe
